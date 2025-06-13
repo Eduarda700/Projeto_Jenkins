@@ -4,14 +4,14 @@ pipeline {
         pollSCM('* * * * *')
     }
     environment {
-        DOCKERHUB_REPO = "andrrade"  // Altere para seu usuário do DockerHub
+        DOCKERHUB_REPO = "eduarda7"  // Altere para seu usuário do DockerHub
         BUILD_TAG = "${env.BUILD_ID}"
     }
     stages {
         stage('Build Frontend Docker Image') {
             steps {
                 script {
-                    frontendapp = docker.build("${DOCKERHUB_REPO}/meu-frontend:${BUILD_TAG}", '-f ./frontend/Dockerfile ./frontend')
+                    frontendapp = docker.build("${DOCKERHUB_REPO}/meu-frontend:${BUILD_TAG }", '-f ./frontend/Dockerfile ./frontend')
                 }
             }
         }
