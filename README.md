@@ -88,11 +88,6 @@ Nesta fase vamos criar uma pipeline no jenkins que quando acionada, seja manualm
 
 · Realizar o stage de push;
 
-· Fazer assim que commitar com o git push acionar automatico a pipeline no jenkins
-
-Entregáveis: Pipeline funcional no Jenkins até o push da imagem.
-
-
 Fase 5: Jenkins - Deploy no Kubernetes
 
 Nesta fase o Jenkins será configurado para acessar o kubectl e acesso ao cluster local, assim como uma etapa de deploy será incluída no pipeline.
@@ -103,4 +98,5 @@ Nesta fase o Jenkins será configurado para acessar o kubectl e acesso ao cluste
 
 · Testar a pipeline completa;
 
-Entregáveis: Pipeline completo com deploy automatizado.
+![Captura de Tela (78)](https://github.com/user-attachments/assets/94cdc330-a40b-4e8a-afbe-82589fbb5615)
+
