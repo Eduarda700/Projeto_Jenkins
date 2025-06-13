@@ -59,6 +59,7 @@ back
 
 · Versionar o dockerfile junto com o código da aplicação no github.
 
+![Captura de Tela (77)](https://github.com/user-attachments/assets/a2f9e7df-0eda-4031-85c9-e64cb72118fe)
 
 
 Fase 3: Arquivos de Deploy no Kubernetes
