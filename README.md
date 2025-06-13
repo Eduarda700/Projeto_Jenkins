@@ -15,7 +15,7 @@ Tecnologias Utilizadas
 
 · Jenkins: Ferramenta de CI/CD.
 
-· Kubernetes local: Minikube, Kind, Docker Desktop ou Rancher Desktop.
+· Kubernetes local: Rancher Desktop.
 
 Código Base da Aplicação (Backend) projeto-kubernetes-pb-desafio-jenkins/backend/main.py at main · box-genius/projeto-kubernetes-pb-desafio-jenkins · GitHub
 
@@ -30,28 +30,36 @@ Nesta fase será necessário crias as seguintes atividades:
 -- como este repositorio por exemplo
 · Criar conta no Docker Hub.
 -- https://hub.docker.com/
+
 · Verificar acesso ao cluster Kubernetes local.
--- para este projeto estou usando rancher desktop
+
 · Validar execução local com uvicorn.
+
 teste local com uvicorn
+
 ![Captura de Tela (71)](https://github.com/user-attachments/assets/03ec83d6-5479-4729-b45e-595664cf92df)
 
 Feito: Código rodando localmente, repositório do github criado e ambiente preparado.
 
 Fase 2: Conteinerização com Docker
 
-Nesta fase é esperado que se execute o backend, incrementando esses códigos em containers e depois faça a publicação deste container no Dockerhub
-
+Nesta fase é esperado que se execute o backend e frontend, incrementando esses códigos em containers e depois faça a publicação deste container no Dockerhub
+front
 · Para teste local e ver se está funcionando, pode criar docker-compose (opcional);
 
-· Fazer build: docker build -t usuario/fastapi-hello:latest .
+· Fazer build: docker build -t usuario/meu-frontend:v1.0.0
 
-· Fazer push: docker push usuario/fastapi-hello:latest
+· Fazer push: docker push usuariomeu-frontend:v1.0.0
+
+· Para teste local e ver se está funcionando, pode criar docker-compose (opcional);
+back
+· Fazer build: docker build -t usuario/meu-backend:v1.0.0
+
+· Fazer push: docker push usuario/meu-backend:v1.0.0
 
 · Versionar o dockerfile junto com o código da aplicação no github.
 
 
-Entregáveis: Imagem publicada no Docker Hub.
 
 Fase 3: Arquivos de Deploy no Kubernetes
 
@@ -64,6 +72,8 @@ Nesta fase vamos manualmente criar o deployment e service do kubernetes para que
 
 Entregáveis: Aplicativo exposto em localhost:30001 via NodePort ou rodando via port-forward. O aplicativo precisa estar funcionando a partir do Kubernetes.
 
+![Captura de Tela (75)](https://github.com/user-attachments/assets/defeed5e-0551-416a-9c67-de15937a2004)
+![Captura de Tela (76)](https://github.com/user-attachments/assets/fff39fae-7c67-4b98-be09-b44f274e4611)
 
 
 Fase 4: Jenkins - Build e Push
