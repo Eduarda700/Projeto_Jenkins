@@ -52,3 +52,44 @@ Nesta fase é esperado que se execute o backend, incrementando esses códigos em
 
 
 Entregáveis: Imagem publicada no Docker Hub.
+
+Fase 3: Arquivos de Deploy no Kubernetes
+
+Nesta fase vamos manualmente criar o deployment e service do kubernetes para que rode a imagem de container que acabamos de subir na fase anterior, no Kubernetes local.
+
+· Criar o yaml de deployment da aplicação e aplicá-lo no cluster
+
+· Criar o yaml de service do deploymento e aplicá-lo no cluster
+
+
+Entregáveis: Aplicativo exposto em localhost:30001 via NodePort ou rodando via port-forward. O aplicativo precisa estar funcionando a partir do Kubernetes.
+
+
+
+Fase 4: Jenkins - Build e Push
+
+
+Nesta fase vamos criar uma pipeline no jenkins que quando acionada, seja manualmente ou por alguma mudança no repositório do github, execute o build e o push da imagem de container.
+
+· Criar a pipeline no Jenkins;
+
+· Realizar o stage de build;
+
+· Realizar o stage de push;
+
+· Fazer assim que commitar com o git push acionar automatico a pipeline no jenkins
+
+Entregáveis: Pipeline funcional no Jenkins até o push da imagem.
+
+
+Fase 5: Jenkins - Deploy no Kubernetes
+
+Nesta fase o Jenkins será configurado para acessar o kubectl e acesso ao cluster local, assim como uma etapa de deploy será incluída no pipeline.
+
+· Jenkins precisa acessar o kubectl (usar agent com kubectl e kubeconfig configurados);
+
+· Adicionar etapa de deploy no Jenkinsfile;
+
+· Testar a pipeline completa;
+
+Entregáveis: Pipeline completo com deploy automatizado.
